@@ -1,0 +1,51 @@
+<html>
+<head>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+        body {
+            background-color: bisque;
+        }
+        table#B01 tr:nth-child(even){
+            
+                background-color:yellow;
+            
+        }
+        table#B01 tr:nth-child(odd){
+            
+            background-color:red;
+        
+    }
+    </style>
+      <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+       
+  
+    </br>
+    <h3>The available cars are:
+        <table id="B01">
+            <tr>
+                <td>name</td>
+                <td>due</td>
+                <td>des</td>
+           
+            </tr>
+            <% for ( var i =0; i< mycustomers.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= mycustomers[i].name %>
+                    </td>
+                    <td>
+                        <%= mycustomers[i].date%>
+                    </td>
+                    <td>
+                        <%= mycustomers[i].Descrip %>
+                    </td>
+                   
+                </tr>
+                <% }%>
+    </h3>
+</body>
+</html>
