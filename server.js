@@ -14,6 +14,7 @@ app.get("/",function(req,res){
     let fileName=filepath+"inde.html";
     res.sendFile(fileName);
 });
+//nothing
 app.get("/addTask",function(req,res){
     let fileName=filepath+"index.html";
     res.sendFile(fileName);
