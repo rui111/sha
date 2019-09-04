@@ -11,7 +11,7 @@ let morgan =require('morgan');
 let db;
 let MongoClient=mongodb.MongoClient;
 
-let url="mongodb://localhost:27017/"
+let url="mongodb://0.0.0.0:27017/"
 
 MongoClient.connect(url, { useNewUrlParser: true,useUnifiedTopology:true },
     function (err, client) {
