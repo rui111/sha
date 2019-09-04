@@ -23,9 +23,55 @@
       <td>  Descrip:</td>
       <td>  <input type="text" name="Descrip" /></td>
      </tr>
+     <tr>
+        <td>  Status:</td>
+        <td>
+        <select name="s">
+            <option value="completed" >Completed</option>
+            <option value="inProcess" >InPrcess</option>
+            
+          </select></td>
+          
+       </tr>
     </table>
         <button>Submit</button>
     </form>
+</br>
+<form action="/insertmany" method="POST">
+    <table>
+<tr>
+    <td>Task Name:</td>
+   <td> <input type="text" name="name" /></td>
+ </tr> 
+ <tr>
+   <td> Due date:</td>
+   <td> <input type="date" name="date" /> </td>
+</tr>
+    <tr>
+  <td>  Descrip:</td>
+  <td>  <input type="text" name="Descrip" /></td>
+ </tr>
+ <tr>
+    <td>  Status:</td>
+    <td>
+    <select name="s">
+        <option value="completed" >Completed</option>
+        <option value="inProcess" >InPrcess</option>
+        
+      </select></td>
+      <td>
+
+    </td>
+      
+   </tr>
+   <tr>
+        <td>  Count:</td>
+        <td>  <input type="number" name="c" /></td>
+       </tr>
+</table>
+    <button>Submit</button>
+</form>
+
 </body>
 </html>
 </body>

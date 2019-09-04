@@ -1,51 +1,92 @@
 <html>
+
 <head>
-    <style>
-        table,th,td {
-            border: 1px solid black;
-        }
-        body {
-            background-color: bisque;
-        }
-        table#B01 tr:nth-child(even){
-            
-                background-color:yellow;
-            
-        }
-        table#B01 tr:nth-child(odd){
-            
-            background-color:red;
-        
-    }
-    </style>
+        <head>
+                <link rel="stylesheet" type="text/css" href="styles.css">
+              </head>
       <link rel="stylesheet" href="styles.css">
 </head>
 <body>
        
   
     </br>
-    <h3>The available cars are:
+    <h3>The available tasks are:
         <table id="B01">
             <tr>
+                <td>id</td>
                 <td>name</td>
                 <td>due</td>
                 <td>des</td>
-           
+                <td>status</td>           
             </tr>
             <% for ( var i =0; i< mycustomers.length;i++){ %>
                 <tr>
+                        <td>
+                                <%= mycustomers[i]._id %>
+                            </td>
                     <td>
                         <%= mycustomers[i].name %>
                     </td>
                     <td>
-                        <%= mycustomers[i].date%>
+                        <%= mycustomers[i].due%>
                     </td>
                     <td>
-                        <%= mycustomers[i].Descrip %>
+                        <%= mycustomers[i].des%>
+                    </td>
+                    <td>
+                        <%= mycustomers[i].state%>
                     </td>
                    
                 </tr>
                 <% }%>
     </h3>
+
+
+    <form action="/deletebyid" method="POST">
+        <table> deletebyid
+    <tr>
+        <td>Task id:</td>
+       <td> <input type="text" name="id" /></td>
+   
+          
+       </tr>
+    </table>
+        <button>Submit</button>
+    </form>
+    <br />
+    <form action="/upbyid" method="POST">
+        <table> updatebyid
+    <tr>
+        <td>Task id:</td>
+       <td> <input type="text" name="id" /></td>
+       <tr>
+            <td>Task Name:</td>
+           <td> <input type="text" name="name" /></td>
+         </tr> 
+         <tr>
+           <td> Due date:</td>
+           <td> <input type="date" name="date" /> </td>
+        </tr>
+            <tr>
+          <td>  Descrip:</td>
+          <td>  <input type="text" name="Descrip" /></td>
+         </tr>
+         <tr>
+            <td>  Status:</td>
+            <td>
+            <select name="s">
+                <option value="completed" >Completed</option>
+                <option value="inProcess" >InPrcess</option>
+                
+              </select></td>
+              
+           </tr>
+   
+          
+       </tr>
+    </table>
+        <button>Submit</button>
+    </form>
+    
 </body>
 </html>
